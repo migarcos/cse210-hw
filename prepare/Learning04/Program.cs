@@ -17,5 +17,12 @@ class Program
         task02.GetSummary();
         task02.GetWritingInformation();
         Console.WriteLine($"{task02.GetStudentName()} {task02.GetTopic()} {task02.GetTitle()}");
+        
+        Console.WriteLine(" - - - - - - - - - - - - - - ");
+        task.SetProblems("'Learning04 practice'");
+        Console.WriteLine($"{task.GetStudentName()} -  {task.GetTopic()} : {task.GetTextbookSection()} {task.GetProblems()}");
+
+        task02.SetTitle("'Define functions'");
+        Console.WriteLine($"{task02.GetStudentName()} - {task02.GetTopic()} : {task02.GetTitle()}");
     }
 }

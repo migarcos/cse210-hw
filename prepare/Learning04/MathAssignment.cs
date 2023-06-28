@@ -7,6 +7,14 @@ public class MathAssignment: Assignment
         _textbookSection = textbookSection;
         _problems = problems;
     }
+    public void SetTextbookSection(string newSection)
+    {
+        _textbookSection = newSection;
+    }
+    public void SetProblems(string problems)
+    {
+        _problems = problems;
+    }
     public string GetTextbookSection()
     {
         return _textbookSection;

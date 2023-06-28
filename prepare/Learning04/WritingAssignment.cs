@@ -6,6 +6,10 @@ public class WritingAssignment : Assignment
     {
         _title = title;
     }
+    public void SetTitle(string title)
+    {
+        _title = title;
+    }
     public string GetTitle()
     {
         return _title;
