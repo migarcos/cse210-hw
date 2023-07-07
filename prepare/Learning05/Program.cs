@@ -24,7 +24,7 @@ class Program
         shapes.Add(circle);
 
         foreach (Shape shape in shapes)
-         {
+        {
             Console.WriteLine($"{shape.GetName()} {shape.GetColor()} {shape.GetArea()}");
         }
 

@@ -14,7 +14,6 @@ public class Rectangle: Shape
     {
         _width = measure2;
     }
-
     public override double GetArea()
     {
         return _lenght * _width / 2;

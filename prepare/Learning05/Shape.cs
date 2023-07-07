@@ -1,4 +1,4 @@
-    public class Shape
+    public abstract class Shape
     {
         private string _color, _name;
 
@@ -15,13 +15,13 @@
         {
             return _color;
         }
-        public virtual double GetArea()
-        {
-            return 1;
-        }
         public string GetName()
         {
             return _name;
         }
-    
+        // public virtual double GetArea()
+        // {
+        //     return 1;
+        // }
+        public abstract double GetArea();    
     }
