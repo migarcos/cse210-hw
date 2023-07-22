@@ -1,0 +1,4 @@
+0
+Simple Goal: Give a Talk, When I asked, 100, False
+Eternal Goal: Sutdy scriptures, At least 10 min, 100
+CheckList Goal: Attend temple, performa an ordinance, 50, 400, 3, 0
