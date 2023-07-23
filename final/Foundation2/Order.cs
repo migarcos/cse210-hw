@@ -7,6 +7,11 @@ public class Order
     {
 
     }
+    public Order(Customer customer, List<Product> oProds)
+    {
+        _oCustomer = customer;
+        _oProducts = oProds;
+    }
     public void SetCustomer(string name, Address address)
     {
         _oCustomer = new Customer(name, address);
@@ -23,30 +28,34 @@ public class Order
     {
         return _oProducts;
     }
-    public float OrderCost()
+    public double OrderCost()
     {
-        float total = 0;
+        double total = 0;
+        Address auxAddress = new Address();
+        auxAddress = _oCustomer.GetAddress();
         foreach (Product product in _oProducts)
         {
             total = total + product.GetProdPrice() * product.GetProdQtty();
         }
-        // if (_oCustomer.GetStatus())
-        // {
-        //     total = total + 5;
-        // } else {
-        //     total = total + 35;
-        // }
+        if (auxAddress.GetStatus(auxAddress.GetCountry()))
+        {
+            total = total + 5;
+            Console.WriteLine("\tShipping: U$ 5");
+        } else {
+            total = total + 35;
+            Console.WriteLine("\tShipping: U$35");
+        }
         return total;
     }
     public void PackingLabel() // list the name and product id of each product in the order.    
     {
         foreach(Product product in _oProducts){
-            Console.WriteLine($"{product.GetProdId} \t {product.GetProdName()}");
+            Console.WriteLine($"{product.GetProdId()}\t {product.GetProdQtty()} \t {product.GetProdName()} ");
         }
     }
     
     public void ShippingLabel() // list the name and address of the customer
     {
-        Console.WriteLine($"{_oCustomer.GetName()} \n{_oCustomer.GetAddress()}");
+        Console.WriteLine($"{_oCustomer.GetName()} \n{_oCustomer.GetStringAddress()}");
     }
 }

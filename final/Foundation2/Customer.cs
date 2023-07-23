@@ -24,7 +24,7 @@ public class Customer
     {
         return _cAddress;
     }
-    public string GetCAdrress()
+    public string GetStringAddress()
     {
         string temp = $"{_cAddress.GetStreet()} {_cAddress.GetCity()} {_cAddress.GetCountry()}";
         return temp;

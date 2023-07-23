@@ -1,7 +1,10 @@
 public class Address 
 {
     private string _street, _city, _country;
-
+    public Address()
+    {
+        
+    }
     public Address(string street, string city, string country = "USA")
     {
         _street = street;
