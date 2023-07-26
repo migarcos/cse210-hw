@@ -4,7 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        Running rActivity = new Running("20 Jul 2023", 30, 15);
+        Running rActivity = new Running("20 Jul 2023", 30, 4.8);
         Console.WriteLine(rActivity.GetSummary());
 
         Cycling cActivity = new Cycling("19 Jul 2023", 180, 40);

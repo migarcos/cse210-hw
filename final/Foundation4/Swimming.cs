@@ -30,7 +30,7 @@ public class Swimming: Activity
     }
     public override string GetSummary()
     {
-        string summary = $"{GetDate()} Running ({GetTime()})-Distance {GetDistance()}km, Speed: {GetSpeed()}kph, Pace: {GetPace()} min per km.";
+        string summary = $"{GetDate()} Swimming ({GetTime()})-Distance {GetDistance()}km, Speed: {GetSpeed()}kph, Pace: {GetPace()} min per km.";
         return summary;
     }
 }
